@@ -1,0 +1,9 @@
+acme_hello:
+    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+    prefix:   /
+
+random:
+    path:     /
+    defaults: { _controller: AcmeHelloBundle:Default:index }
+
+   
