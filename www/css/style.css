@@ -8,7 +8,7 @@
 
 
 .fadein {
-    width:60%;
+    width:100%;
     position:relative;
     top:0px;
     left:0px;
@@ -22,11 +22,17 @@
 .absolute-pos {
     position:absolute;
 }
+.adapt {
+    padding-left:0px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-right:0px;
+}
 
 .positioning {
-    left:10px;
+    left:0px;
     top:10px;
-    width:100%;
+    max-width: 100%;
 }
 
 .fadein img, p{
