@@ -27,10 +27,30 @@
 <ion-side-menus>
   <!-- Center content -->
     <ion-side-menu-content>
-        <div class="bar bar-header bar-dark">
+        <!--<div class="bar bar-header bar-dark">
             <button ng-click="toggleLeft()" class="button icon ion-navicon"></button>
             <h1 class="title">selected-menu {{$selected}}</h1>
-        </div>
+        </div>-->
+        
+        <ion-header-bar align-title="center" class="bar-dark">
+            <div class="buttons">
+                <button ng-click="toggleLeft()" class="button icon ion-navicon"></button>
+            </div>
+            <h1 class="title">selected-menu {{$selected}}</h1>
+        <!--<div class="buttons">
+            <button class="button">Right Button</button>
+        </div>-->
+        </ion-header-bar>
+        <ion-content>
+            <div class="row">
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+            </div>
+            <div class="row">
+                <div class="col">Some content!</div>
+            </div>
+        </ion-content>
     </ion-side-menu-content>
 
   <!-- Left menu -->
