@@ -7,20 +7,29 @@
 /* crossfading */
 
 
-
 .fadein {
     width:60%;
-    position:absolute;
+    position:relative;
     top:0px;
     left:0px;
     margin:auto;
 }
-.fadein img, p{
-/*    box-shadow: 5px 5px 10px gray;*/
-    width:80%;
+
+.relative-pos{
+    position: relative;
+}
+
+.absolute-pos {
     position:absolute;
+}
+
+.positioning {
     left:10px;
     top:10px;
+    width:100%;
+}
+
+.fadein img, p{
     -webkit-animation-name: fade;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 18s;
