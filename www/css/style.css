@@ -3,7 +3,21 @@
     cursor: pointer
 }
 
+.news-title {
+    color: #38ebf2;
+    font-weight: 800;
+}
 
+.news-text {
+    color: gray;
+}
+
+#last_news {
+    border-bottom: solid 2px #38ebf2;
+}
+
+#arrow_dx {
+}
 /* crossfading */
 
 
@@ -29,13 +43,17 @@
     padding-right:0px;
 }
 
+.icon {
+    text-align:center;
+}
+
 .positioning {
     left:0px;
     top:10px;
     max-width: 100%;
 }
 
-.fadein img, p{
+.fadein img{
     -webkit-animation-name: fade;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 18s;
