@@ -6,7 +6,9 @@
 .news-title {
     color: #38ebf2;
     font-weight: 800;
+    font-size: 20px;
 }
+
 
 .news-text {
     color: gray;
@@ -17,6 +19,15 @@
 }
 
 #arrow_dx {
+
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+    text-align: center;
+    left: 50%;
+    right: 50%;
 }
 /* crossfading */
 
