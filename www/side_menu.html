@@ -32,11 +32,11 @@
             <h1 class="title">selected-menu {{$selected}}</h1>
         </div>-->
         
-        <ion-header-bar align-title="center" class="bar-dark">
-            <div class="buttons">
-                <button ng-click="toggleLeft()" class="button icon ion-navicon"></button>
+        <ion-header-bar align-title="center" class="bar-light header-menu">
+            <div class="buttons button-menu">
+                <div ng-click="toggleLeft()" class="icon ion-navicon"></div>
             </div>
-            <h1 class="title">selected-menu {{$selected}}</h1>
+            <h1 class="title">{{items[$selected].label}}</h1>
         <!--<div class="buttons">
             <button class="button">Right Button</button>
         </div>-->
@@ -59,10 +59,10 @@
     </ion-side-menu-content>
 
   <!-- Left menu -->
-  <ion-side-menu side="left">
+  <ion-side-menu side="left" class="side-menu">
     <ion-list>
-        <ion-item ng-repeat="item in items" ng-click="toggleLeft($index)" class="pointer">
-            <a href="{{item.anchor}}">{{item.label}}</a>
+        <ion-item ng-repeat="item in items" ng-click="toggleLeft($index)" class="pointer item-menu">
+            <a class="link" ng-class="{active: $index==$selected}" href="{{item.anchor}}">{{item.label}}</a>
         </ion-item>
     </ion-list>
   </ion-side-menu>

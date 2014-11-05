@@ -27,12 +27,13 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
         }
     };
     $scope.items = [
-        {label: "chi_siamo", anchor: "side_menu.html#/about?index=1"},
-        {label: "settori", anchor: "side_menu.html#/settori?index=2"},
-        {label: "servizi", anchor: "side_menu.html#/servizi?index=3"},
-        {label: "download", anchor: "side_menu.html#/download?index=4"},
-        {label: "notizie", anchor: "side_menu.html#/notizie?index=5"},
-        {label: "contatti", anchor: "side_menu.html#/contatti?index=6"}
+        {label: "HOME", anchor: "home.html"},
+        {label: "CHI SIAMO", anchor: "side_menu.html#/about?index=1"},
+        {label: "SETTORI", anchor: "side_menu.html#/settori?index=2"},
+        {label: "SERVIZI", anchor: "side_menu.html#/servizi?index=3"},
+        {label: "DOWNLOAD", anchor: "side_menu.html#/download?index=4"},
+        {label: "NOTIZIE", anchor: "side_menu.html#/notizie?index=5"},
+        {label: "CONTATTI", anchor: "side_menu.html#/contatti?index=6"}
     ];
     
     $scope.$on('$routeChangeStart', function(event, next, current) {
