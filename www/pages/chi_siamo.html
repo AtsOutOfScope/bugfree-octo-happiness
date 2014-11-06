@@ -1,1 +1,33 @@
-<div>chi_siamo.html {{message}}</div>
+
+<div class="row">
+<div class="col">
+<div class="tabs-striped tabs-top tabs-background-positive tabs-light">
+    <div class="tabs">
+      <a class="tab-item active" ng-click="tab1">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" ng-click="tab2">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" ng-click="tab3">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+ </div>
+</div>
+</div>
+
+<div class="row">
+<div class=col">
+<div ng-switch on="selection">
+          <div ng-switch-when="tab1">aaaa</div>
+          <div ng-switch-when="tab2">Home Span</div>
+          <div ng-switch-default>default</div>
+</div>
+</div>
+</div>
+
+

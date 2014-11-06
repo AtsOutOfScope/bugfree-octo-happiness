@@ -73,4 +73,24 @@ app.config(function($routeProvider) {
         templateUrl : 'pages/contatti.html',
         controller: 'aboutController'
     });
+//tabs routing
+
+$routeProvider.when('/friends', {
+        templateUrl : 'pages/tab-friends.html',
+        controller: 'aboutController'
+    });
+
+$routeProvider.when('/info', {
+        templateUrl : 'pages/tab-info.html',
+        controller: 'aboutController'
+    });
+$routeProvider.when('/dash', {
+        templateUrl : 'pages/tab-dash.html',
+        controller: 'aboutController'
+    });
+$routeProvider.when('/friends', {
+        templateUrl : 'pages/friends.html',
+        controller: 'aboutController'
+    });
+
 });
