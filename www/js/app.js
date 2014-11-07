@@ -38,7 +38,9 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
     
     $scope.$on('$routeChangeStart', function(event, next, current) {
         console.log(event, next, current);
-        $scope.$selected = next.params.index;
+	if(angular.isDefined(next) && angular.isDefined(next.params) && angular.isDefined(next.params.index)) {
+        	$scope.$selected = next.params.index;
+	}
     });
     
 });
@@ -74,23 +76,65 @@ app.config(function($routeProvider) {
         controller: 'aboutController'
     });
 //tabs routing
+app.config(function($stateProvider, $urlRouterProvider) {
 
-$routeProvider.when('/friends', {
-        templateUrl : 'pages/tab-friends.html',
-        controller: 'aboutController'
-    });
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider
 
-$routeProvider.when('/info', {
-        templateUrl : 'pages/tab-info.html',
-        controller: 'aboutController'
-    });
-$routeProvider.when('/dash', {
-        templateUrl : 'pages/tab-dash.html',
-        controller: 'aboutController'
-    });
-$routeProvider.when('/friends', {
-        templateUrl : 'pages/friends.html',
-        controller: 'aboutController'
-    });
+    // setup an abstract state for the tabs directive
+    .state('tab', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "tabs.html"
+    })
+
+    // Each tab has its own nav history stack:
+
+    .state('tab.dash', {
+      url: '/dash',
+      views: {
+        'tab-dash': {
+          templateUrl: 'pages/tab-info.html',
+          controller: 'DashCtrl'
+        }
+      }
+    })
+
+    .state('tab.friends', {
+      url: '/friends',
+      views: {
+        'tab-friends': {
+          templateUrl: 'pages/tab-info.html',
+          controller: 'FriendsCtrl'
+        }
+      }
+    })
+    .state('tab.friend-detail', {
+      url: '/friend/:friendId',
+      views: {
+        'tab-friends': {
+          templateUrl: 'pages/tab-info.html',
+          controller: 'FriendDetailCtrl'
+        }
+      }
+    })
+
+    .state('tab.account', {
+      url: '/account',
+      views: {
+        'tab-account': {
+          templateUrl: 'pages/tab-info.html',
+          controller: 'AccountCtrl'
+        }
+      }
+    })
+
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/tab/dash');
+
+});
 
 });
