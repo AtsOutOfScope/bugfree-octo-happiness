@@ -3,11 +3,20 @@
 /* Tabs */
 
 .tabs-chisiamo {
-
+    padding-top: 0;
+    border-top: 0;
 }
+
+.tabs-chisiamo .first-tab {
+    border: 1px solid #66f2b7;
+    border-left: 0;
+    border-right: 0;
+}
+
 
 .tabs-chisiamo .tab {
     border: 1px solid #66f2b7;
+    border-right:0;
 }
 
 .tabs-chisiamo .tab-active {
@@ -15,6 +24,10 @@
 }
 
 /* end tabs */
+
+.no-padding {
+    padding: 0 0 0 0;
+}
 
 .pointer {
     cursor: pointer
@@ -31,6 +44,8 @@
     color: #66f2b7;
     font-weight: 800;
 }
+
+
 .bar.bar-light .title {
     color: #66f2b7;
     font-size: 20px;

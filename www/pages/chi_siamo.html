@@ -1,5 +1,5 @@
-<div class="row tabs-chisiamo" ng-init="selection='tab1'">
-    <div class="col tab" ng-class="{'tab-active': selection=='tab1'}" ng-click="selection='tab1'">tab1</div>
+<div class="row tabs-chisiamo adapt" ng-init="selection='tab1'">
+    <div class="col first-tab" ng-class="{'tab-active': selection=='tab1'}" ng-click="selection='tab1'">tab1</div>
     <div class="col tab" ng-class="{'tab-active': selection=='tab2'}" ng-click="selection='tab2'">tab2</div>
     <div class="col tab" ng-class="{'tab-active': selection=='tab3'}" ng-click="selection='tab3'">tab3</div>
     <div class="col tab" ng-class="{'tab-active': selection=='tab4'}" ng-click="selection='tab4'">tab4</div>
@@ -7,11 +7,16 @@
 </div>
 
 <div class="row" ng-switch on="selection">
-    <div class="col" ng-switch-when="tab1">Settings Div</div>
-    <div class="col" ng-switch-when="tab2">Home Span</div>
-    <div class="col" ng-switch-when="tab3">default</div>
-    <div class="col" ng-switch-when="tab4">Home Span</div>
-    <div class="col" ng-switch-when="tab5">default</div>
+    <div class="col" ng-switch-when="tab1"><ng-include src="'pages/tabs/tab1.html'" ></ng-include></div>
+    <div class="col" ng-switch-when="tab2"><ng-include src="'pages/tabs/tab2.html'" ></ng-include></div>
+    <div class="col" ng-switch-when="tab3"><ng-include src="'pages/tabs/tab3.html'" ></ng-include></div>
+    <div class="col" ng-switch-when="tab4"><ng-include src="'pages/tabs/tab4.html'" ></ng-include></div>
+    <div class="col" ng-switch-when="tab5"><ng-include src="'pages/tabs/tab5.html'" ></ng-include></div>
 </div>
 
-<div class="row" id="gallery">gallery</div>
+
+<hr />
+
+<div class="row" id="gallery">
+    <div class="col">GALLERIA IMMAGINI</div>
+</div>

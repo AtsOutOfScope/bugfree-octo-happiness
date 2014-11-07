@@ -1,1 +1,10 @@
-<div>notizie.html {{message}}</div>
+<div class="row">
+    <div class="col">
+        <ion-list>
+            <ion-item ng-repeat="notizia in notizie">
+                <p ng-bind="notizia.data"></p>
+                <p ng-bind="notizia.text"></p>
+            </ion-item>
+        </ion-list>
+    </div>
+</div>

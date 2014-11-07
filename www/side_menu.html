@@ -43,8 +43,8 @@
         </ion-header-bar>
         <ion-content>
            
-            <div class="row">
-                <div class="col">
+            <div class="row adapt">
+                <div class="col adapt">
                     <div ng-view></div>
                 </div>
             </div>
@@ -54,8 +54,8 @@
   <!-- Left menu -->
   <ion-side-menu side="left" class="side-menu">
     <ion-list>
-        <ion-item ng-repeat="item in items" ng-click="toggleLeft($index)" class="pointer item-menu">
-            <a class="link" ng-class="{active: $index==$selected}" href="{{item.anchor}}">{{item.label}}</a>
+        <ion-item ng-repeat="item in items" class="pointer item-menu">
+            <a class="link" ng-click="toggleLeft($index)" ng-class="{active: $index==$selected}" href="{{item.anchor}}">{{item.label}}</a>
         </ion-item>
     </ion-list>
   </ion-side-menu>

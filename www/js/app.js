@@ -35,7 +35,10 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
         {label: "NOTIZIE", anchor: "side_menu.html#/notizie?index=5"},
         {label: "CONTATTI", anchor: "side_menu.html#/contatti?index=6"}
     ];
-    
+    $scope.notizie = [
+        {data: "data1", text: "notizia1"},
+        {data: "data2", text: "notizia2"}
+    ];
     $scope.$on('$routeChangeStart', function(event, next, current) {
         console.log(event, next, current);
 	if(angular.isDefined(next) && angular.isDefined(next.params) && angular.isDefined(next.params.index)) {
