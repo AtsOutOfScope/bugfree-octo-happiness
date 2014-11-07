@@ -1,4 +1,21 @@
 /* Empty. Add your own CSS if you like */
+
+/* Tabs */
+
+.tabs-chisiamo {
+
+}
+
+.tabs-chisiamo .tab {
+    border: 1px solid #66f2b7;
+}
+
+.tabs-chisiamo .tab-active {
+    border-bottom: 0;
+}
+
+/* end tabs */
+
 .pointer {
     cursor: pointer
 }
