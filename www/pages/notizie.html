@@ -2,8 +2,9 @@
     <div class="col">
         <ion-list>
             <ion-item ng-repeat="notizia in notizie">
-                <p ng-bind="notizia.data"></p>
-                <p ng-bind="notizia.text"></p>
+                <p ng-bind="notizia.data_notizia"></p>
+                <p ng-show="lang=='ita'" ng-bind="notizia.titolo_ita"></p>
+                <p ng-show="lang=='eng'" ng-bind="notizia.titolo_eng"></p>
             </ion-item>
         </ion-list>
     </div>

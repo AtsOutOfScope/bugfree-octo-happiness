@@ -18,7 +18,10 @@ var app = angular.module('starter', ['ionic', 'ngRoute'])
   });
 });
 
-app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
+app.controller('ContentController', function($scope, $ionicSideMenuDelegate, News){
+    var ITA = 'ita';
+    var ENG = 'eng';
+    $scope.lang = ITA;
     $scope.$selected = 0;
     $scope.toggleLeft = function(index) {
         $ionicSideMenuDelegate.toggleLeft();
@@ -35,10 +38,9 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
         {label: "NOTIZIE", anchor: "side_menu.html#/notizie?index=5"},
         {label: "CONTATTI", anchor: "side_menu.html#/contatti?index=6"}
     ];
-    $scope.notizie = [
-        {data: "data1", text: "notizia1"},
-        {data: "data2", text: "notizia2"}
-    ];
+    
+
+    
                
     /* DocumentHandler */
     $scope.openPdf = function() {
@@ -76,6 +78,8 @@ app.controller('aboutController', function($scope){
     console.log('aboutController', $scope.message);
 });
 
+
+
 app.config(function($routeProvider) {
     $routeProvider.when('/about', {
         templateUrl : 'pages/chi_siamo.html',
@@ -95,72 +99,12 @@ app.config(function($routeProvider) {
     });
     $routeProvider.when('/notizie', {
         templateUrl : 'pages/notizie.html',
-        controller: 'aboutController'
+        controller: 'newsController'
     });
     $routeProvider.when('/contatti', {
         templateUrl : 'pages/contatti.html',
         controller: 'aboutController'
     });
-//tabs routing
-app.config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
-  $stateProvider
-
-    // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: "/tab",
-      abstract: true,
-      templateUrl: "tabs.html"
-    })
-
-    // Each tab has its own nav history stack:
-
-    .state('tab.dash', {
-      url: '/dash',
-      views: {
-        'tab-dash': {
-          templateUrl: 'pages/tab-info.html',
-          controller: 'DashCtrl'
-        }
-      }
-    })
-
-    .state('tab.friends', {
-      url: '/friends',
-      views: {
-        'tab-friends': {
-          templateUrl: 'pages/tab-info.html',
-          controller: 'FriendsCtrl'
-        }
-      }
-    })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'pages/tab-info.html',
-          controller: 'FriendDetailCtrl'
-        }
-      }
-    })
-
-    .state('tab.account', {
-      url: '/account',
-      views: {
-        'tab-account': {
-          templateUrl: 'pages/tab-info.html',
-          controller: 'AccountCtrl'
-        }
-      }
-    })
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
-
-});
 
 });

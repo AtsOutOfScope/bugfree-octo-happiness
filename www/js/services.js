@@ -1,25 +1,36 @@
-app.factory('Labels', function($http, $q) {
+app.factory('Service', function($http, $q) {
     
     
     function handleSuccess(response) {
+        console.log('success', response);
         return response.data;
     }
     
     function handleError(response) {
         return $q.reject("An unknown error occurred.");
     }
-    function get() {
+    function get(ServiceUrl) {
         var request = $http({
             method: "get",
-            url: "http://localhost:8000/hello/ciao",
+            url: ServiceUrl,
             params: {
                 action: "get"
             }
         });
+        console.log('req', request);
         return(request.then(handleSuccess, handleError));
     }
     
     return {
-        get: get
+        call: get
+    }
+});
+
+app.factory('News', function($http, $q, Service) {
+    function getNews() {
+        return Service.call('http://trr.it/android/service/carica_news_json.php').then();    
+    }
+    return {
+        getNews: getNews
     }
 });
