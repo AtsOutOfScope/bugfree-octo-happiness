@@ -27,7 +27,7 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
         }
     };
     $scope.items = [
-        {label: "HOME", anchor: "home.html"},
+        {label: "HOME", anchor: "index.html"},
         {label: "CHI SIAMO", anchor: "side_menu.html#/about?index=1"},
         {label: "SETTORI", anchor: "side_menu.html#/settori?index=2"},
         {label: "SERVIZI", anchor: "side_menu.html#/servizi?index=3"},
@@ -39,6 +39,24 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate ){
         {data: "data1", text: "notizia1"},
         {data: "data2", text: "notizia2"}
     ];
+               
+    /* DocumentHandler */
+    $scope.openPdf = function() {
+               
+        /*handleDocumentWithURL(
+            function() {console.log('success');},
+            function(error) {
+            console.log('failure');
+                if(error == 53) {
+                    console.log('No app that handles this file type.');
+                }
+            },
+            '6.pdf'
+        );*/
+        window.open('6.pdf');
+    }
+    
+    
     $scope.$on('$routeChangeStart', function(event, next, current) {
         console.log(event, next, current);
 	if(angular.isDefined(next) && angular.isDefined(next.params) && angular.isDefined(next.params.index)) {
