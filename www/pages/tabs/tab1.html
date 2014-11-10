@@ -1,1 +1,12 @@
-tab1.html
+<div class="row">
+    <div class="col">
+        <p ng-show="lang==lang_ita" ng-bind="chiSiamo[0].titolo_ita"></p>
+        <p ng-show="lang==lang_eng" ng-bind="chiSiamo[0].titolo_eng"></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <p ng-show="lang==lang_ita" ng-bind-html="chiSiamo[0].testo_ita"></p>
+        <p ng-show="lang==lang_eng" ng-bind-html="chiSiamo[0].testo_eng"></p>
+    </div>
+</div>

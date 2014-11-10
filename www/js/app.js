@@ -21,6 +21,8 @@ var app = angular.module('starter', ['ionic', 'ngRoute'])
 app.controller('ContentController', function($scope, $ionicSideMenuDelegate, News){
     var ITA = 'ita';
     var ENG = 'eng';
+    $scope.lang_ita = ITA;
+    $scope.lang_eng = ENG;
     $scope.lang = ITA;
     $scope.$selected = 0;
     $scope.toggleLeft = function(index) {
@@ -73,10 +75,7 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, New
     
 });
 
-app.controller('aboutController', function($scope){
-    $scope.message = "----";
-    console.log('aboutController', $scope.message);
-});
+
 
 
 

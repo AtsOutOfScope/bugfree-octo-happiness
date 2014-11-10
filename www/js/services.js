@@ -34,3 +34,12 @@ app.factory('News', function($http, $q, Service) {
         getNews: getNews
     }
 });
+
+app.factory('ChiSiamo', function($http, $q, Service) {
+    function ChiSiamo() {
+        return Service.call('http://trr.it/android/service/carica_chisiamo_json.php').then();    
+    }
+    return {
+        getChiSiamo: ChiSiamo
+    }
+});
