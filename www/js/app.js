@@ -18,15 +18,15 @@ var app = angular.module('starter', ['ionic', 'ngRoute'])
   });
 });
 app.constant('Constant', {
-    langITA: 'ita',
-    langENG: 'eng',
+    langITA: 'ITA',
+    langENG: 'ENG',
     loadingTemplate: 'Loading...'
 });
 app.controller('ContentController', function($scope, $ionicSideMenuDelegate, News, Constant){
     $scope.lang_ita = Constant.langITA;
     $scope.lang_eng = Constant.langENG;
     $scope.lang = Constant.langITA;
-	$scope.langu = "ITA";
+	
     $scope.$selected = 0;
     $scope.toggleLeft = function(index) {
         $ionicSideMenuDelegate.toggleLeft();
@@ -46,10 +46,10 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, New
     
 
     $scope.changeLang = function() {
-		if($scope.langu == "ITA"){
-			$scope.langu = "ENG";
+		if($scope.lang == Constant.langITA){
+			$scope.lang = Constant.langENG;
 		}else{
-			$scope.langu = "ITA";
+			$scope.lang = Constant.langITA;
 		}
     }
                
