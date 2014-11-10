@@ -17,13 +17,15 @@ var app = angular.module('starter', ['ionic', 'ngRoute'])
     }
   });
 });
-
-app.controller('ContentController', function($scope, $ionicSideMenuDelegate, News){
-    var ITA = 'ita';
-    var ENG = 'eng';
-    $scope.lang_ita = ITA;
-    $scope.lang_eng = ENG;
-    $scope.lang = ITA;
+app.constant('Constant', {
+    langITA: 'ita',
+    langENG: 'eng',
+    loadingTemplate: 'Loading...'
+});
+app.controller('ContentController', function($scope, $ionicSideMenuDelegate, News, Constant){
+    $scope.lang_ita = Constant.langITA;
+    $scope.lang_eng = Constant.langENG;
+    $scope.lang = Constant.langITA;
     $scope.$selected = 0;
     $scope.toggleLeft = function(index) {
         $ionicSideMenuDelegate.toggleLeft();
