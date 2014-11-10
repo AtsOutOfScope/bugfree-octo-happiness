@@ -25,7 +25,7 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
   </head>
-  <body animation="slide-left-right-ios7">
+  <body animation="slide-left-right-ios7" ng-app="starter" ng-controller="ContentController">
     <!-- 
       The nav bar that will be updated as we navigate between views.
     -->
@@ -46,41 +46,73 @@
 		    </div>
         	</div>
 	</div>
-	<div id="news_bar" class="row">
+	<div id="language_circle" class="circle" ng-click="changeLang()"><h6 style="color:white;">{{langu}}</h6></div>
+	<div id="news_bar" class="row adapt">
 		<div id="last_news" class="col col-90">
 		    <p class="news-title">NOTIZIA</p>
 		    <p class="news-text">ultima notizia in ordine di tempo presa dal db(con link alla pagina)</p>
 		</div>
-		<div id="arrow_dx" class="col col-10 ion-android-arrow-forward"></div>
+		<div id="arrow_dx" class="col col-10 "><div class="ion-android-arrow-forward icon adapt"></div></div>
 	</div>
 
 	
 	<div class="row menu-home">
-        <div class="col">
-            <div id="icons1" class="row">
-                <div class="col col-33 ion-person icon">
-                    <a class="menu-home-link" href="side_menu.html#/about?index=1"><p>CHI SIAMO</a></p>
+        <div class="col icon-lightblue icon-size">
+            <div id="icons1" class="row icon-lightblue">
+                <div class="col col-33 ">
+                    <a class="menu-home-link" href="side_menu.html#/about?index=1">
+						<div class="ion-person icon">	
+							<p class="f-15">CHI SIAMO</p>
+						</div>
+					</a>
                 </div>
-                <div class="col col-33 ion-ios7-box icon">
-                    <a class="menu-home-link" href="side_menu.html#/settori?index=2"><p>SETTORI</p></a>
+                <div class="col col-33">
+                    <a class="menu-home-link" href="side_menu.html#/settori?index=2">
+						<div class="ion-ios7-box icon">	
+							<p class="f-15">SETTORI</p>
+						</div>
+					</a>
                 </div>
-                <div class="col col-33 ion-merge icon">
-                    <a class="menu-home-link" href="side_menu.html#/servizi?index=3"><p>SERVIZI</p></a>
+                <div class="col col-33">
+                    <a class="menu-home-link" href="side_menu.html#/servizi?index=3">
+						<div class="ion-merge icon">
+							<p class="f-15">SERVIZI</p>
+						</div>
+					</a>
                 </div>
+
             </div>
             <div id="icons2" class="row">
-                <div class="col col-33 ion-android-download icon">
-                    <a class="menu-home-link" href="side_menu.html#/download?index=4"><p>DOWNLOAD</p></a>
+                <div class="col col-33">
+					<a class="menu-home-link" href="side_menu.html#/download?index=4">
+						<div class="ion-android-download icon">
+							<p class="f-15">DOWNLOAD</p>
+						</div>
+					</a>
+				</div>
+                <div class="col col-33 ">			
+					<a class="menu-home-link" href="side_menu.html#/notizie?index=5">
+						<div class="ion-ios7-paper icon">
+							<p class="f-15">NOTIZIE</p>
+						</div>
+					</a>
                 </div>
-                <div class="col col-33 ion-ios7-paper icon">
-                    <a class="menu-home-link" href="side_menu.html#/notizie?index=5"><p>NOTIZIE</p></a>
-                </div>
-                <div class="col col-33 ion-ios7-telephone icon">
-                    <a class="menu-home-link" href="side_menu.html#/contatti?index=6"><p>CONTATTI</p></a>
+                <div class="col col-33">				
+                    <a class="menu-home-link" href="side_menu.html#/contatti?index=6">
+						<div class="ion-ios7-telephone icon">	
+							<p class="f-15">CONTATTI</p>
+						</div>
+					</a>				
                 </div>
             </div>
         </div>  
     </div>
+<div>
 
+
+
+
+
+</div>
   </body>
 </html>

@@ -26,6 +26,7 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, New
     $scope.lang_ita = Constant.langITA;
     $scope.lang_eng = Constant.langENG;
     $scope.lang = Constant.langITA;
+	$scope.langu = "ITA";
     $scope.$selected = 0;
     $scope.toggleLeft = function(index) {
         $ionicSideMenuDelegate.toggleLeft();
@@ -44,7 +45,13 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, New
     ];
     
 
-    
+    $scope.changeLang = function() {
+		if($scope.langu == "ITA"){
+			$scope.langu = "ENG";
+		}else{
+			$scope.langu = "ITA";
+		}
+    }
                
     /* DocumentHandler */
     $scope.openPdf = function() {

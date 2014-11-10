@@ -88,7 +88,7 @@
 }
 
 #arrow_dx {
-
+	background-color:grey;
 }
 
 .logo {
@@ -177,4 +177,30 @@
 }
 #f3 {
     -webkit-animation-delay: -12s;
+}
+
+.icon {
+	font-size: 28px;	
+}
+
+.f-15 {
+	font-size: 15px;
+}
+
+.icon-lightblue{
+	color:hsl(155, 84%, 67%);
+}
+
+.icon-menu{
+	font-size:45px;
+}
+
+.circle {
+width: 30px;
+height: 30px;
+background: hsl(155, 84%, 67%);
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+border-radius: 50%;
+float:right;
 }
