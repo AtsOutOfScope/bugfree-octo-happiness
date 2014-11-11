@@ -97,4 +97,10 @@ p strong {
 }
 .menu-left .item{
 	background: #A6BD75;
+	padding: 0;
+}
+.list .link {
+	width: 100%;
+	display: block;
+	padding: 16px;
 }
