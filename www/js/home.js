@@ -5,7 +5,8 @@ app.controller('homeController', function($scope, Constant) {
         $scope.en = Constant.langENG;
         $scope.it = Constant.langITA;
     };
-    
+
+
     $scope.changeLang = function() {
 		if($scope.lang == Constant.langITA){
 			$scope.lang = Constant.langENG;
@@ -15,3 +16,4 @@ app.controller('homeController', function($scope, Constant) {
     }
     
 });
+
