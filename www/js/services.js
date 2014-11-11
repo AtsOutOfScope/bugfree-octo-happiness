@@ -35,6 +35,15 @@ app.factory('News', function($http, $q, Service) {
     }
 });
 
+app.factory('Gallery', function($http, $q, Service) {
+    function getGallery() {
+        return Service.call('http://trr.it/android/service/carica_gallery_json.php').then();    
+    }
+    return {
+        getGallery: getGallery
+    }
+});
+
 app.factory('ChiSiamo', function($http, $q, Service) {
     function ChiSiamo() {
         return Service.call('http://trr.it/android/service/carica_chisiamo_json.php').then();    
