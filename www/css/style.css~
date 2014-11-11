@@ -1,0 +1,207 @@
+/* Empty. Add your own CSS if you like */
+
+/* Tabs */
+
+.tabs-chisiamo {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.tabs-chisiamo .first-tab {
+    border: 1px solid #66f2b7;
+    border-left: 0;
+    border-right: 0;
+}
+
+
+.tabs-chisiamo .tab {
+    border: 1px solid #66f2b7;
+    border-right:0;
+}
+
+.tabs-chisiamo .tab-active {
+    border-bottom: 0;
+}
+
+/* end tabs */
+
+.no-padding {
+    padding: 0 0 0 0;
+}
+
+.pointer {
+    cursor: pointer
+}
+.menu-content {
+    box-shadow: 0 0 0;
+}
+.item-menu {
+    background-color: #66f2b7;
+}
+.menu-home-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: #66f2b7;
+    font-weight: 800;
+}
+
+
+.bar.bar-light .title {
+    color: #66f2b7;
+    font-size: 20px;
+    font-weight: 800;
+}
+.item-menu > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+.item-menu > a.active {
+    color: black;
+}
+.header-menu {
+    height: 54px;
+    background-color: #66f2b7;
+    padding: 0 0 0 0;
+}
+.button-menu {
+    background-color: #66f2b7;
+    width: 50px;
+}
+.side-menu {
+    background-color: #66f2b7;
+}
+.news-title {
+    color: #66f2b7;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+
+.news-text {
+    color: gray;
+}
+
+#last_news {
+    border-bottom: solid 2px #66f2b7;
+}
+
+#arrow_dx {
+	background-color:grey;
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+    text-align: center;
+    left: 50%;
+    right: 50%;
+}
+/* crossfading */
+
+
+.fadein {
+    width:100%;
+    position:relative;
+    top:0px;
+    left:0px;
+    margin:auto;
+}
+
+.relative-pos{
+    position: relative;
+}
+
+.absolute-pos {
+    position:absolute;
+}
+.adapt {
+    padding-left:0px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-right:0px;
+}
+
+.icon {
+    text-align:center;
+}
+
+.positioning {
+    left:0px;
+    top:10px;
+    max-width: 100%;
+}
+
+.fadein img{
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 18s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    
+    100% {
+        opacity:0;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    
+    100% {
+        opacity:0;
+    }
+}
+
+
+#f1 {
+    -webkit-animation-delay: -6s;
+}
+#f2 {
+/*    -webkit-animation-delay: -18s;*/
+    -webkit-animation-delay: 0s;
+}
+#f3 {
+    -webkit-animation-delay: -12s;
+}
+
+.icon {
+	font-size: 28px;	
+}
+
+.f-15 {
+	font-size: 15px;
+}
+
+.icon-lightblue{
+	color:hsl(155, 84%, 67%);
+}
+
+.arrow-dx{
+	padding:20px;
+}
+
+
+.circle {
+width: 30px;
+height: 30px;
+background: hsl(155, 84%, 67%);
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+border-radius: 50%;
+float:right;
+}
