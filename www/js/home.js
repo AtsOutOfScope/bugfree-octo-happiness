@@ -10,5 +10,9 @@ app.controller('homeController', function($scope) {
             $scope.$selected = index;
         }
     };
+
+$scope.slides = ["img/il_nostro_futuro.jpg","img/opportunita_lavoro.jpg","img/il_nostro_business.jpg"];
+
+
     
 });
