@@ -8,7 +8,7 @@
 	background: #7ABEB1;
 }
 .circle h6{
-	margin-top: 14px;
+	margin-top: 15px;
 	font-size: 16px;
 }
 #slideshow img {
@@ -42,5 +42,59 @@
 }
 .logo {
 	display: block;
-	margin-left: -32px;
+	margin-left: -65px;
+	height: 70px;
+	position: relative;
+	top: 8px;
+}
+
+ion-header-bar.bar h1.title {
+	color: #A6BD75 !important;
+	font-size: 40px !important;
+	height: 40px;
+	position: relative;
+	width: 100%;
+	top: 15px;
+	padding-right: 80px;
+	float: right;
+	text-align: right;	
+}
+.button-menu {
+	margin-left: 0px;
+	width: 70px;
+	background: #A6BD75;
+}
+.button-menu .icon{
+	width: 70px;
+	margin-top: 5px;
+	color: #fff;
+}
+.tab {
+	border-color: #39B3B8 !important;
+	height: 70px;
+}
+.first-tab {
+	border-color: #39B3B8 !important;
+}
+
+p strong {
+	color: #39B3B8 !important;
+	font-size: 20px;
+}
+
+#gallery .col {
+	color: #39B3B8 !important;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 50px;
+	height: 40px;
+	line-height: 30px;
+	background: url(../img/galleria.png) no-repeat 12px center;
+	background-size: 30px;
+}
+.menu-left {
+	background: #A6BD75;
+}
+.menu-left .item{
+	background: #A6BD75;
 }
