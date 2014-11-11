@@ -26,6 +26,7 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, New
     $scope.lang_ita = Constant.langITA;
     $scope.lang_eng = Constant.langENG;
     $scope.lang = Constant.langITA;
+	$scope.langLabel = "ENG";
 	
     $scope.$selected = 0;
     $scope.toggleLeft = function(index) {
@@ -48,8 +49,10 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, New
     $scope.changeLang = function() {
 		if($scope.lang == Constant.langITA){
 			$scope.lang = Constant.langENG;
+			$scope.langLabel = "ITA";
 		}else{
 			$scope.lang = Constant.langITA;
+			$scope.langLabel = "ENG";
 		}
     }
                

@@ -45,7 +45,7 @@
 		    </div>
         	</div>
 	</div>
-	<div id="language_circle" class="circle" ng-click="changeLang()"><h6 style="color:white;" ng-bind="lang"><h6></h6></div>
+	<div id="language_circle" class="circle" ng-click="changeLang()"><h6 style="color:white;" ng-bind="langLabel"><h6></h6></div>
 	<div id="news_bar" class="row adapt">
 		<div id="last_news" class="col col-90">
 		    <p class="news-title">NOTIZIA</p>
@@ -61,7 +61,8 @@
                 <div class="col col-33 ">
                     <a class="menu-home-link" href="side_menu.html#/about?index=1">
 						<div class="ion-person icon">	
-							<p class="f-15">CHI SIAMO</p>
+							<p ng-show="lang==lang_ita" class="f-15">CHI SIAMO</p>
+							<p ng-show="lang==lang_eng" class="f-15">WHO WE ARE</p>
 						</div>
 					</a>
                 </div>
