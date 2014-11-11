@@ -11,6 +11,7 @@ app.factory('Service', function($http, $q) {
     }
     function get(ServiceUrl) {
         var request = $http({
+            cache: true,
             method: "get",
             url: ServiceUrl,
             params: {

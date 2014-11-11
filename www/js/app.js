@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('starter', ['ionic','angular-carousel', 'ngRoute'])
+var app = angular.module('starter', ['ionic','angular-carousel'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -25,34 +25,112 @@ app.constant('Constant', {
 
 
 
+/* ui-router */
 
-
-
-app.config(function($routeProvider) {
-    $routeProvider.when('/about', {
-        templateUrl : 'pages/chi_siamo.html',
-        controller: 'aboutController'
+app.config(function($stateProvider, $urlRouterProvider) {
+    // to go default state
+    $urlRouterProvider.otherwise('/index');
+    $stateProvider
+    .state('index', {
+        url: '/index',
+        views: {
+            'view1': {
+                templateUrl: 'pages/home.html'
+            }
+        }
+        
+    })
+    
+    .state('menu', {
+        url: '/menu',
+        views: {
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController'
+            }
+        } 
+    })
+    .state('chisiamo', {
+        url: '/chisiamo',
+        views: {
+            'view2@chisiamo': {
+                templateUrl:'pages/chi_siamo.html',
+                controller: 'aboutController'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 1}
+            }
+        } 
+    })
+    .state('settori', {
+        url: '/settori',
+        views: {
+            'view2@settori': {
+                templateUrl:'pages/settori.html'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 2}
+            }
+        } 
+    })
+    .state('servizi', {
+        url: '/servizi',
+        views: {
+            'view2@servizi': {
+                templateUrl:'pages/servizi.html'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 3}
+            }
+        } 
+    })
+    .state('download', {
+        url: '/download',
+        views: {
+            'view2@download': {
+                templateUrl:'pages/download.html'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 4}
+            }
+        } 
+    })
+    .state('notizie', {
+        url: '/notizie',
+        views: {
+            'view2@notizie': {
+                templateUrl:'pages/notizie.html',
+                controller: 'newsController'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 5}
+            }
+        } 
+    })
+    .state('contatti', {
+        url: '/contatti',
+        views: {
+            'view2@contatti': {
+                templateUrl:'pages/contatti.html'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 4}
+            }
+        } 
     });
-    $routeProvider.when('/settori', {
-        templateUrl : 'pages/settori.html',
-        controller: 'aboutController'
-    });
-    $routeProvider.when('/servizi', {
-        templateUrl : 'pages/servizi.html',
-        controller: 'aboutController'
-    });
-    $routeProvider.when('/download', {
-        templateUrl : 'pages/download.html',
-        controller: 'aboutController'
-    });
-    $routeProvider.when('/notizie', {
-        templateUrl : 'pages/notizie.html',
-        controller: 'newsController'
-    });
-    $routeProvider.when('/contatti', {
-        templateUrl : 'pages/contatti.html',
-        controller: 'aboutController'
-    });
-
+    
 
 });
+
