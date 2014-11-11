@@ -1,14 +1,17 @@
-app.controller('homeController', function($scope) {
-    var vm = this;
-    vm.init = function() {
+app.controller('homeController', function($scope, Constant) {
+    
+    $scope.init = function() {
+        $scope.lang = Constant.langITA;
+        $scope.en = Constant.langENG;
+        $scope.it = Constant.langITA;
     };
     
-    $scope.langLabel = "ENG";
-    $scope.toggleLeft = function(index) {
-        $ionicSideMenuDelegate.toggleLeft();
-        if(angular.isDefined(index)){
-            $scope.$selected = index;
-        }
-    };
+    $scope.changeLang = function() {
+		if($scope.lang == Constant.langITA){
+			$scope.lang = Constant.langENG;
+		}else{
+			$scope.lang = Constant.langITA;
+		}
+    }
     
 });

@@ -6,6 +6,6 @@ app.controller('newsController', function($scope, News, $ionicLoading, Constant)
         console.log('newsController', response);
         $scope.notizie = response;
         $ionicLoading.hide();
-    });
+    }, function() {$ionicLoading.hide();});
     
 });

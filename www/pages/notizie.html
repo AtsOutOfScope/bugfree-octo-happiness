@@ -3,8 +3,8 @@
         <ion-list>
             <ion-item ng-repeat="notizia in notizie">
                 <p ng-bind="notizia.data_notizia"></p>
-                <p ng-show="lang==lang_ita" ng-bind="notizia.titolo_ita"></p>
-                <p ng-show="lang==lang_eng" ng-bind="notizia.titolo_eng"></p>
+                <p ng-show="lang==it" ng-bind="notizia.titolo_ita"></p>
+                <p ng-show="lang==en" ng-bind="notizia.titolo_eng"></p>
             </ion-item>
         </ion-list>
     </div>
