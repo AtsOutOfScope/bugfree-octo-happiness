@@ -1,3 +1,4 @@
+a {text-decoration: none;}
 .circle {
 	position: relative;
 	height: 50px;
@@ -94,6 +95,9 @@ strong p  {
 	font-size: 20px;
 }
 
+#gallery  {
+}
+
 #gallery .col {
 	color: #39B3B8 !important;
 	font-size: 20px;
@@ -103,6 +107,7 @@ strong p  {
 	line-height: 30px;
 	background: url(../img/galleria.png) no-repeat 12px center;
 	background-size: 30px;
+	text-decoration: none;
 }
 .menu-left {
 	background: #A6BD75;
@@ -131,6 +136,7 @@ strong p  {
 }
 .list .item p{
 	font-size: 20px !important;
+	white-space: normal !important;
 }
 .list .item{
 	border: 0;
