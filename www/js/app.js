@@ -68,7 +68,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/settori',
         views: {
             'view2@settori': {
-                templateUrl:'pages/settori.html'
+                templateUrl:'pages/settori.html',
+		controller: 'settoriController'
             },
             'view1': {
                 templateUrl:'pages/menu.html',

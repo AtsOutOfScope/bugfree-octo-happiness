@@ -81,3 +81,12 @@ app.factory('DownloadPdfDocument', function($http, $q, Service) {
     }
 });
 
+app.factory('Settori', function($http, $q, Service) {
+    function Settori() {
+        return Service.call('http://trr.it/android/service/carica_chisiamo_json.php?id=7').then();    
+    }
+    return {
+        Settori: Settori
+    }
+});
+
