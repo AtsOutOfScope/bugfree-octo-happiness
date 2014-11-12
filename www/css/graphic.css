@@ -61,6 +61,7 @@ ion-header-bar.bar h1.title {
 	color: #A6BD75 !important;
 	font-size: 30px !important;
 	width: 70%;
+	margin-top: 4px;
 }
 .button-menu {
 	margin-left: 0px;
