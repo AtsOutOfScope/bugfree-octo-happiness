@@ -71,6 +71,7 @@ ion-header-bar.bar h1.title {
 	margin-left: 0px;
 	width: 70px;
 	background: #A6BD75;
+	z-index: 999999;
 }
 .button-menu .icon{
 	width: 70px;
