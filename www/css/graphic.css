@@ -62,6 +62,7 @@ ion-header-bar.bar h1.title {
 	font-size: 30px !important;
 	width: 70%;
 	margin-top: 4px;
+	margin-left: 50px;
 }
 .button-menu {
 	margin-left: 0px;
