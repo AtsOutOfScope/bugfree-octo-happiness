@@ -1,11 +1,12 @@
-app.controller('ContentController', function($scope, $ionicSideMenuDelegate, $state){
-
-	
+app.controller('ContentController', function($scope, $ionicSideMenuDelegate, $state, $rootScope){
+    
+    var api = this;
+    $scope.test = "pippo";
+    api.back = false;
     $scope.$selected = $state.current.views['view1'].data.selected;
     $scope.toggleLeft = function() {
         $ionicSideMenuDelegate.toggleLeft();
     };
-    
     $scope.items = [
         {label: "HOME", anchor: "index"},
         {label: "CHI SIAMO", anchor: "chisiamo"},
@@ -16,8 +17,7 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, $st
         {label: "CONTATTI", anchor: "contatti"}
     ];
     
-
-
+    
     
     
 });
