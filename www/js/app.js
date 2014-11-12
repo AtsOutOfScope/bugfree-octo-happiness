@@ -146,6 +146,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 data: {selected: 1}
             }
         } 
+    })
+
+.state('galleryslide', {
+        url: '/galleryslide',
+        views: {
+            'view2@galleryslide': {
+                templateUrl:'pages/gallery_slidebox.html',
+		controller: 'galleryController'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 1}
+            }
+        } 
     });
 	
 
