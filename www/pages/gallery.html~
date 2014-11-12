@@ -1,5 +1,0 @@
-<div class="row" ng-controller="galleryController">
-	<div ng-repeat="img in images" class="col-33">
-		<img src="{{img.src}}"/>
-	</div>
-</div>
