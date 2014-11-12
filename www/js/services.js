@@ -72,3 +72,12 @@ app.factory('Download', function($http, $q, Service) {
     }
 });
 
+app.factory('DownloadPdfDocument', function($http, $q, Service) {
+    function DownloadPdfDocument() {
+        return Service.call('http://trr.it/android/service/carica_download_json.php').then();    
+    }
+    return {
+        get: DownloadPdfDocument
+    }
+});
+

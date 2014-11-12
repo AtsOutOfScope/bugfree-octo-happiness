@@ -1,10 +1,23 @@
-<div class="row">
+<div class="row" ng-show="!api.showDescNews">
     <div class="col">
         <ion-list>
-            <ion-item ng-repeat="d in downloadList">         
+            <ion-item ng-repeat="d in downloadList" ng-click="onclick(d.id)">         
             	<strong>       
                 <p ng-show="lang==it" ng-bind="d.titolo_ita" class="download-list"></p>
                 <p ng-show="lang==en" ng-bind="d.titolo_eng" class="download-list"></p>
+                </strong>
+            </ion-item>
+        </ion-list>
+    </div>
+</div>
+
+<div class="row" ng-show="api.showDescNews">
+    <div class="col">
+        <ion-list>
+            <ion-item ng-repeat="d in pdfDoc">         
+            	<strong>       
+                    <p ng-show="lang==it" ng-bind="d.nome_ita" class="download-list"></p>
+                    <p ng-show="lang==en" ng-bind="d.nome_eng" class="download-list"></p>
                 </strong>
             </ion-item>
         </ion-list>

@@ -1,12 +1,27 @@
-app.controller('DownloadController', function($scope, Download, $ionicLoading, Constant){
+app.controller('DownloadController', function($scope, Download, $ionicLoading, Constant, DownloadPdfDocument){
 
-	
     $ionicLoading.show({template: Constant.loadingTemplate});
     Download.Download().then(function(response) {
         console.log('DownloadController', response);
         $scope.downloadList = response;
         $ionicLoading.hide();
     }, function() {$ionicLoading.hide();});
+    
+    
+    $scope.onclick = function(id) {
+        $scope.pdfDoc = [];
+        DownloadPdfDocument.get().then(function(response) {
+            console.log('DownloadPdfDocument', response);
+            for(var i=0; i<response.length; i++){
+                var pdf = response[i];
+                if(id == pdf.id_gruppo) {
+                    $scope.pdfDoc.push(pdf);
+                }
+            }
+            $scope.api.showDescNews = true;
+            $scope.api.back = true;
+        });
+    }
                
     /* DocumentHandler */
     $scope.openPdf = function() {
