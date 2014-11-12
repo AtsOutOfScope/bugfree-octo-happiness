@@ -2,9 +2,13 @@
     <div class="col">
         <ion-list>
             <ion-item ng-repeat="notizia in notizie" ng-click="openNews($index)">
-                <p ng-bind="notizia.data_notizia"></p>
-                <p ng-show="lang==it" ng-bind="notizia.titolo_ita"></p>
-                <p ng-show="lang==en" ng-bind="notizia.titolo_eng"></p>
+                <strong>
+                    <p ng-bind="notizia.data_notizia" class="notiziaBold"></p>
+                 </strong>
+                 <strong>
+                    <p ng-show="lang==it" ng-bind="notizia.titolo_ita"></p>
+                    <p ng-show="lang==en" ng-bind="notizia.titolo_eng"></p>
+                </strong>
             </ion-item>
         </ion-list>
     </div>

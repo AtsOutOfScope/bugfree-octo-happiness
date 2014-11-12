@@ -116,3 +116,21 @@ strong p  {
 	margin-top: 15px;
 	height: 25px;
 }
+
+.list .notiziaBold{
+	color: #999999 !important;
+	font-weight: normal;
+}
+.list .item p{
+	font-size: 20px !important;
+}
+.list .item{
+	border: 0;
+}
+
+.back_btn {
+	background: url(../img/back_btn.jpg) no-repeat center center #75C2B0;
+	text-indent: -9999px;
+	width: 50px;
+	background-size: 20px;
+}
