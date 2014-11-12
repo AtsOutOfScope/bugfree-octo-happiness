@@ -137,7 +137,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/gallery',
         views: {
             'view2@gallery': {
-                templateUrl:'pages/gallery.html'
+                templateUrl:'pages/gallery.html',
+		controller: 'galleryController'
             },
             'view1': {
                 templateUrl:'pages/menu.html',
