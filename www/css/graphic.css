@@ -81,6 +81,10 @@ p strong {
 	color: #39B3B8 !important;
 	font-size: 20px;
 }
+strong p  {
+	color: #39B3B8 !important;
+	font-size: 20px;
+}
 
 #gallery .col {
 	color: #39B3B8 !important;
