@@ -53,3 +53,22 @@ app.factory('ChiSiamo', function($http, $q, Service) {
         getChiSiamo: ChiSiamo
     }
 });
+
+app.factory('Servizi', function($http, $q, Service) {
+    function Servizi() {
+        return Service.call('http://trr.it/android/service/carica_servizi_json.php').then();    
+    }
+    return {
+        Servizi: Servizi
+    }
+});
+
+app.factory('Download', function($http, $q, Service) {
+    function Download() {
+        return Service.call('http://trr.it/android/service/carica_sez_download_json.php').then();    
+    }
+    return {
+        Download: Download
+    }
+});
+

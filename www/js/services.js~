@@ -11,6 +11,7 @@ app.factory('Service', function($http, $q) {
     }
     function get(ServiceUrl) {
         var request = $http({
+            cache: true,
             method: "get",
             url: ServiceUrl,
             params: {
@@ -35,12 +36,12 @@ app.factory('News', function($http, $q, Service) {
     }
 });
 
-app.factory('Images', function($http, $q, Service) {
-    function getImages() {
+app.factory('Gallery', function($http, $q, Service) {
+    function getGallery() {
         return Service.call('http://trr.it/android/service/carica_gallery_json.php').then();    
     }
     return {
-        getImages: getImages
+        getGallery: getGallery
     }
 });
 
@@ -50,5 +51,14 @@ app.factory('ChiSiamo', function($http, $q, Service) {
     }
     return {
         getChiSiamo: ChiSiamo
+    }
+});
+
+app.factory('Servizi', function($http, $q, Service) {
+    function Servizi() {
+        return Service.call('http://trr.it/android/service/carica_servizi_json.php').then();    
+    }
+    return {
+        Servizi: Servizi
     }
 });

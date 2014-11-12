@@ -3,11 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-<<<<<<< HEAD
-var app = angular.module('starter', ['ionic','angular-carousel', 'ngRoute'])
-=======
-var app = angular.module('starter', ['ionic'])
->>>>>>> baf287f22add2c2f055b85264b30a22b45c814af
+var app = angular.module('starter', ['ionic','angular-carousel'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -133,8 +129,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 data: {selected: 4}
             }
         } 
+    })
+	.state('gallery', {
+        url: '/gallery',
+        views: {
+            'view2@gallery': {
+                templateUrl:'pages/gallery.html'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 1}
+            }
+        } 
     });
-    
+	
 
 });
 

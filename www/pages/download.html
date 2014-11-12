@@ -1,2 +1,10 @@
-<div>download.html {{message}}</div>
-<div ng-click="openPdf()">click to open pdf</div>
+<div class="row" ng-controller="DownloadController">
+    <div class="col">
+        <ion-list>
+            <ion-item ng-repeat="d in downloadList">                
+                <p ng-show="lang==it" ng-bind="d.titolo_ita"></p>
+                <p ng-show="lang==en" ng-bind="d.titolo_eng"></p>
+            </ion-item>
+        </ion-list>
+    </div>
+</div>

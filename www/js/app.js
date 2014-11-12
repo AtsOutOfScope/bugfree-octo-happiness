@@ -98,7 +98,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             },
             'view1': {
                 templateUrl:'pages/menu.html',
-                controller: 'ContentController',
+                controller: 'DownloadController',
                 data: {selected: 4}
             }
         } 
@@ -129,8 +129,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 data: {selected: 4}
             }
         } 
+    })
+	.state('gallery', {
+        url: '/gallery',
+        views: {
+            'view2@gallery': {
+                templateUrl:'pages/gallery.html'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                data: {selected: 1}
+            }
+        } 
     });
-    
+	
 
 });
 

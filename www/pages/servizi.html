@@ -1,1 +1,10 @@
-<div>servizi.html</div>
+<div class="row" ng-controller="serviziController">
+    <div class="col">
+        <ion-list>
+            <ion-item ng-repeat="servizio in servizi">               
+                <p ng-show="lang==it" ng-bind="servizio.titolo_ita"></p>
+                <p ng-show="lang==en" ng-bind="servizio.titolo_eng"></p>
+            </ion-item>
+        </ion-list>
+    </div>
+</div>
