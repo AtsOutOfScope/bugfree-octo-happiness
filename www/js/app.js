@@ -94,11 +94,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/download',
         views: {
             'view2@download': {
-                templateUrl:'pages/download.html'
+                templateUrl:'pages/download.html',
+                controller: 'DownloadController'
+
             },
             'view1': {
                 templateUrl:'pages/menu.html',
-                controller: 'DownloadController',
+                controller: 'ContentController',
                 data: {selected: 4}
             }
         } 
@@ -127,7 +129,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'view1': {
                 templateUrl:'pages/menu.html',
                 controller: 'ContentController',
-                data: {selected: 4}
+                data: {selected: 6}
             }
         } 
     })
