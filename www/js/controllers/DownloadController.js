@@ -1,7 +1,12 @@
-app.controller('DownloadController', function($scope){
+app.controller('DownloadController', function($scope, Download, $ionicLoading, Constant){
 
 	
-    
+    $ionicLoading.show({template: Constant.loadingTemplate});
+    Download.Download().then(function(response) {
+        console.log('DownloadController', response);
+        $scope.downloadList = response;
+        $ionicLoading.hide();
+    }, function() {$ionicLoading.hide();});
                
     /* DocumentHandler */
     $scope.openPdf = function() {
