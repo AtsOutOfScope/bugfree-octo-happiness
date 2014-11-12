@@ -104,3 +104,11 @@ p strong {
 	display: block;
 	padding: 16px;
 }
+
+.tabs-chisiamo img{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 15px;
+	height: 25px;
+}
