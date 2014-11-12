@@ -145,6 +145,10 @@ border-color: #39B3B8;
 border-top: none;
 }
 
+.menu-left .list .item{
+	border-color: #fff;
+}
+
 .back_btn {
 	background: url(../img/back_btn.jpg) no-repeat center center #75C2B0;
 	text-indent: -9999px;
