@@ -101,6 +101,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'view1': {
                 templateUrl:'pages/menu.html',
                 controller: 'ContentController',
+                controllerAs: 'api',
                 data: {selected: 4}
             }
         } 
