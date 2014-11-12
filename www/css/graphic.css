@@ -56,6 +56,9 @@ a {text-decoration: none;}
 	position: relative;
 	top: 8px;
 }
+ion-header-bar{
+	border-bottom: 2px solid  #39B3B8 !important; 
+}
 
 ion-header-bar.bar h1.title {
 	color: #A6BD75 !important;
@@ -134,7 +137,12 @@ strong p  {
 	white-space: normal !important;
 }
 .list .item{
-	border: 0;
+border-left: 0;
+border-right: 0;
+border-color: #39B3B8;
+}
+.list .item:first-child{
+border-top: none;
 }
 
 .back_btn {
