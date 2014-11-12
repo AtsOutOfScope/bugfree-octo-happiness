@@ -1,11 +1,17 @@
-<div class="row">
+<div class="row" ng-show="!api.showDescNews">
     <div class="col">
         <ion-list>
-            <ion-item ng-repeat="notizia in notizie">
+            <ion-item ng-repeat="notizia in notizie" ng-click="openNews($index)">
                 <p ng-bind="notizia.data_notizia"></p>
                 <p ng-show="lang==it" ng-bind="notizia.titolo_ita"></p>
                 <p ng-show="lang==en" ng-bind="notizia.titolo_eng"></p>
             </ion-item>
         </ion-list>
+    </div>
+</div>
+<div class="row" ng-show="api.showDescNews">
+    <div class="col">
+        <p ng-show="lang==it" ng-bind-html="notizia.des_notizia_ita"></p>
+        <p ng-show="lang==en" ng-bind-html="notizia.des_notizia_eng"></p>
     </div>
 </div>

@@ -10,6 +10,7 @@
             <div class="buttons button-menu">
                 <div ng-click="toggleLeft()" class="icon ion-navicon icon-menu"></div>
             </div>
+            <div ng-click="api.back=false;api.showDescNews=false;" ng-show="api.back">Indietro</div>
             <h1 class="title">{{items[$selected].label}}</h1>
         <!--<div class="buttons">
             <button class="button">Right Button</button>
