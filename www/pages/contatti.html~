@@ -20,12 +20,12 @@ email: info@trr.it<br><br> website: www.trr.it</p>
 	</div>
 	<div class="row">
 		<div class="col">
-			<a ui-sref="mappa">vai alla mappa</a>
+			<a ui-sref="mappa" class="vaiAllaMappa"><span>vai alla mappa</span><span>go to map</span></a>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
-			<img src="../img/contatti.jpg"/>
+			<img src="./img/contatti.jpg"/>
 		</div>
 	</div>
 
