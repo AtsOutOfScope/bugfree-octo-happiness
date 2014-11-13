@@ -1,10 +1,24 @@
-<div class="row" ng-controller="serviziController">
+<div class="row" ng-show="!api.showDescNews">
     <div class="col">
         <ion-list>
-            <ion-item ng-repeat="servizio in servizi">               
+            <ion-item ng-repeat="servizio in servizi" ng-click="openServizi($index)">               
                 <p ng-show="lang==it" ng-bind="servizio.titolo_ita"></p>
                 <p ng-show="lang==en" ng-bind="servizio.titolo_eng"></p>
             </ion-item>
         </ion-list>
+    </div>
+</div>
+
+
+
+<div class="row" ng-show="api.showDescNews">
+    <div class="col">
+        
+        <strong>
+            <p ng-show="lang==it" ng-bind="servizio.titolo_ita"></p>
+            <p ng-show="lang==en" ng-bind="servizio.titolo_eng"></p>
+        </strong>
+        <p ng-show="lang==it" ng-bind-html="servizio.testo_ita"></p>
+        <p ng-show="lang==en" ng-bind-html="servizio.testo_eng"></p>
     </div>
 </div>

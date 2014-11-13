@@ -7,5 +7,11 @@ app.controller('serviziController', function($scope, Servizi, $ionicLoading, Con
         $scope.servizi = response;
         $ionicLoading.hide();
     }, function() {$ionicLoading.hide();});
+
+	$scope.openServizi = function(index) {
+        $scope.api.showDescNews = true;
+        $scope.servizio = $scope.servizi[index];
+        $scope.api.back = true;
+    }
     
 });

@@ -82,11 +82,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/servizi',
         views: {
             'view2@servizi': {
-                templateUrl:'pages/servizi.html'
+                templateUrl:'pages/servizi.html',
+		controller: 'serviziController'
             },
             'view1': {
                 templateUrl:'pages/menu.html',
                 controller: 'ContentController',
+		controllerAs:'api',
                 data: {selected: 3}
             }
         } 

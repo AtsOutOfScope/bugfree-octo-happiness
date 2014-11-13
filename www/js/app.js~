@@ -20,7 +20,7 @@ var app = angular.module('starter', ['ionic','angular-carousel'])
 app.constant('Constant', {
     langITA: 'ITA',
     langENG: 'ENG',
-    loadingTemplate: 'Loading...'
+    loadingTemplate: '<div class="ion-loading-c"></div>'
 });
 
 
@@ -82,7 +82,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/servizi',
         views: {
             'view2@servizi': {
-                templateUrl:'pages/servizi.html'
+                templateUrl:'pages/servizi.html',
+		controller: 'serviziController'
             },
             'view1': {
                 templateUrl:'pages/menu.html',
@@ -119,6 +120,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 controller: 'ContentController',
                 controllerAs: 'api',
                 data: {selected: 5}
+            }
+        } 
+    })
+    .state('lastnews', {
+        url: '/lastnews',
+        views: {
+            'view2@lastnews': {
+                templateUrl:'pages/notizie.html',
+                controller: 'newsController'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                controllerAs: 'api',
+                data: {selected: 5, lastNews: true}
             }
         } 
     })
@@ -160,7 +176,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'view1': {
                 templateUrl:'pages/menu.html',
                 controller: 'ContentController',
-                data: {selected: 1}
+                data: {selected: 6}
             }
         } 
     })
