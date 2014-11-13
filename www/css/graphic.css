@@ -155,4 +155,14 @@ border-top: none;
 	width: 50px;
 	background-size: 20px;
 }
-
+.vaiAllaMappa{
+	color: #39B3B8 !important;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 50px;
+	height: 40px;
+	line-height: 30px;
+	background: url(../img/mappa.png) no-repeat 12px center;
+	background-size: 30px;
+	text-transform: uppercase;
+}
