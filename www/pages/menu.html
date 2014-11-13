@@ -11,7 +11,7 @@
                 <div ng-click="toggleLeft()" class="icon ion-navicon icon-menu"></div>
             </div>
             <div ng-click="api.back=false;api.showDescNews=false;" ng-show="api.back" class="back_btn">Indietro</div>
-            <h1 class="title">{{items[$selected].label}}</h1>
+            <h1 class="title"><span ng-hide="lang==it">{{items[$selected].label_ita}}</span><span ng-hide="lang==en">{{items[$selected].label_eng}}</span></h1>
         <!--<div class="buttons">
             <button class="button">Right Button</button>
         </div>-->
