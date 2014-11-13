@@ -13,10 +13,12 @@
         	</div>
 	</div>
 	<div id="language_circle" class="circle" ng-click="changeLang()"><h6 style="color:white;" ng-bind="lang"><h6></h6></div>
-	<div id="news_bar" class="row adapt">
+	<div id="news_bar" class="row adapt" ui-sref="lastnews">
 		<div id="last_news" class="col col-90">
-		    <p class="news-title">NOTIZIA</p>
-		    <p class="news-text">ultima notizia in ordine di tempo presa dal db(con link alla pagina)</p>
+		    <p class="news-title" ng-hide="lang==it">NOTIZIA</p>
+            <p class="news-title" ng-hide="lang==en">NEWS</p>
+		    <p class="news-text" ng-hide="lang==it" ng-bind="lastNews.titolo_ita"></p>
+            <p class="news-text" ng-hide="lang==en" ng-bind="lastNews.titolo_eng"></p>
 		</div>
 		<div id="arrow_dx" class="col col-10 "><div class="ion-android-arrow-forward icon adapt"></div></div>
 	</div>
@@ -28,8 +30,8 @@
                 <div class="col col-33 ">
                     <a class="menu-home-link" ui-sref="chisiamo">
 						<div class="ion-person icon">	
-							<p ng-show="lang==it" class="f-15">CHI SIAMO</p>
-							<p ng-show="lang==en" class="f-15">WHO WE ARE</p>
+							<p ng-hide="lang==it" class="f-15">CHI SIAMO</p>
+							<p ng-hide="lang==en" class="f-15">WHO WE ARE</p>
 						</div>
 					</a>
                 </div>

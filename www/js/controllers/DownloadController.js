@@ -8,7 +8,9 @@ app.controller('DownloadController', function($scope, Download, $ionicLoading, C
     }, function() {$ionicLoading.hide();});
     
     
-    $scope.onclick = function(id) {
+    $scope.onclick = function(d) {
+        var id = d.id;
+        $scope.pdf = d;
         $scope.pdfDoc = [];
         DownloadPdfDocument.get().then(function(response) {
             console.log('DownloadPdfDocument', response);

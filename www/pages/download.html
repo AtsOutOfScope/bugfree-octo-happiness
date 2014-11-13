@@ -1,7 +1,7 @@
 <div class="row" ng-show="!api.showDescNews">
     <div class="col">
         <ion-list>
-            <ion-item ng-repeat="d in downloadList" ng-click="onclick(d.id)">         
+            <ion-item ng-repeat="d in downloadList" ng-click="onclick(d)">         
             	<strong>       
                 <p ng-show="lang==it" ng-bind="d.titolo_ita" class="download-list"></p>
                 <p ng-show="lang==en" ng-bind="d.titolo_eng" class="download-list"></p>
@@ -14,10 +14,23 @@
 <div class="row" ng-show="api.showDescNews">
     <div class="col">
         <ion-list>
+            <ion-item>  
+                <p ng-show="lang==it" ng-bind="pdf.titolo_ita" class="download-list"></p>
+                <p ng-show="lang==en" ng-bind="pdf.titolo_eng" class="download-list"></p>
+            </ion-item>
             <ion-item ng-repeat="d in pdfDoc">         
-            	<strong>       
+            	<strong class="row">
+                    <div class="col col-90">
                     <p ng-show="lang==it" ng-bind="d.nome_ita" class="download-list"></p>
                     <p ng-show="lang==en" ng-bind="d.nome_eng" class="download-list"></p>
+                    </div>
+                    <div class="col col-10">
+                    <a class="menu-home-link">
+                        <div class="ion-document icon">
+						</div>    
+                    </a>
+                    </div>
+                    
                 </strong>
             </ion-item>
         </ion-list>

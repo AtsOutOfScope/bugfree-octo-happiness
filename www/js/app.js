@@ -20,7 +20,7 @@ var app = angular.module('starter', ['ionic','angular-carousel'])
 app.constant('Constant', {
     langITA: 'ITA',
     langENG: 'ENG',
-    loadingTemplate: 'Loading...'
+    loadingTemplate: '<div class="ion-loading-c"></div>'
 });
 
 
@@ -119,6 +119,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 controller: 'ContentController',
                 controllerAs: 'api',
                 data: {selected: 5}
+            }
+        } 
+    })
+    .state('lastnews', {
+        url: '/lastnews',
+        views: {
+            'view2@lastnews': {
+                templateUrl:'pages/notizie.html',
+                controller: 'newsController'
+            },
+            'view1': {
+                templateUrl:'pages/menu.html',
+                controller: 'ContentController',
+                controllerAs: 'api',
+                data: {selected: 5, lastNews: true}
             }
         } 
     })
