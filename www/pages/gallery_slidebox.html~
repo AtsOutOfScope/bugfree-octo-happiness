@@ -1,0 +1,7 @@
+	
+<ul rn-carousel  class="image">
+	  <li ng-repeat="slide in gallery">
+		<div ng-style="{'background-image': 'url(' + slide.url + ')'}" class="bgimage">			
+		</div>
+	  </li>
+</ul>

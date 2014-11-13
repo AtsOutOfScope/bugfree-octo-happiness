@@ -160,7 +160,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'view1': {
                 templateUrl:'pages/menu.html',
                 controller: 'ContentController',
-                data: {selected: 6}
+                data: {selected: 1}
             }
         } 
     })
