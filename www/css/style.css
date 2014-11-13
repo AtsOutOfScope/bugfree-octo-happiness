@@ -23,6 +23,12 @@
     border-bottom: 0;
 }
 
+ul{
+	list-style:initial;
+	padding-left:50px;
+	padding-bottom:25px;
+}
+
 /* end tabs */
 
 .no-padding {
@@ -204,3 +210,9 @@ background: hsl(155, 84%, 67%);
 border-radius: 50%;
 float:right;
 }
+
+#map_address{
+	padding-top:25px;
+}
+
+

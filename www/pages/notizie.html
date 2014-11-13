@@ -6,23 +6,25 @@
                     <p ng-bind="notizia.data_notizia" class="notiziaBold"></p>
                  </strong>
                  <strong>
-                    <p ng-show="lang==it" ng-bind="notizia.titolo_ita"></p>
-                    <p ng-show="lang==en" ng-bind="notizia.titolo_eng"></p>
+                    <p ng-hide="lang==it" ng-bind="notizia.titolo_ita"></p>
+                    <p ng-hide="lang==en" ng-bind="notizia.titolo_eng"></p>
                 </strong>
             </ion-item>
         </ion-list>
     </div>
 </div>
-<div class="row" ng-show="api.showDescNews">
+
+
+<div id="single_not" class="row" ng-show="api.showDescNews">
     <div class="col">
         <strong>
             <p ng-bind="notizia.data_notizia" class="notiziaBold"></p>
         </strong>
         <strong>
-            <p ng-show="lang==it" ng-bind="notizia.titolo_ita"></p>
-            <p ng-show="lang==en" ng-bind="notizia.titolo_eng"></p>
+            <p ng-hide="lang==it" ng-bind="notizia.titolo_ita"></p>
+            <p ng-hide="lang==en" ng-bind="notizia.titolo_eng"></p>
         </strong>
-        <p ng-show="lang==it" ng-bind-html="notizia.des_notizia_ita"></p>
-        <p ng-show="lang==en" ng-bind-html="notizia.des_notizia_eng"></p>
+        <p ng-hide="lang==it" ng-bind-html="notizia.des_notizia_ita"></p>
+        <p ng-hide="lang==en" ng-bind-html="notizia.des_notizia_eng"></p>
     </div>
 </div>

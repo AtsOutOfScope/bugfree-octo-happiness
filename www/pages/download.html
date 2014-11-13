@@ -15,8 +15,8 @@
     <div class="col">
         <ion-list>
             <ion-item>  
-                <p ng-show="lang==it" ng-bind="pdf.titolo_ita" class="download-list"></p>
-                <p ng-show="lang==en" ng-bind="pdf.titolo_eng" class="download-list"></p>
+                <p ng-hide="lang==it" ng-bind="pdf.titolo_ita" class="download-list"></p>
+                <p ng-hide="lang==en" ng-bind="pdf.titolo_eng" class="download-list"></p>
             </ion-item>
             <ion-item ng-repeat="d in pdfDoc">         
             	<strong class="row">

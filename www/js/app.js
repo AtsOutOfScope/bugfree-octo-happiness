@@ -139,7 +139,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         } 
     })
-    .state('contatti', {
+    /*.state('contatti', {
         url: '/contatti',
         views: {
             'view2@contatti': {
@@ -151,7 +151,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 data: {selected: 6}
             }
         } 
-    })
+    })*/
 	.state('gallery', {
         url: '/gallery',
         views: {
@@ -167,16 +167,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
         } 
     })
 
-.state('mappa', {
-        url: '/mappa',
+.state('contatti', {
+        url: '/contatti',
         views: {
-            'view2@mappa': {
-                templateUrl:'pages/mappa.html',
+            'view2@contatti': {
+                templateUrl:'pages/contatti.html',
 		controller: 'mappaController'
             },
             'view1': {
                 templateUrl:'pages/menu.html',
                 controller: 'ContentController',
+		controllerAs: 'api',
                 data: {selected: 6}
             }
         } 

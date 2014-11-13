@@ -8,7 +8,7 @@
 </div>-->
 <div class="row">
     <div class="col">
-        <p ng-show="lang==it" ng-bind-html="settori[0].testo_ita"></p>
-        <p ng-show="lang==en" ng-bind-html="settori[0].testo_eng"></p>
+        <p ng-hide="lang==it" ng-bind-html="settori[0].testo_ita"></p>
+        <p ng-hide="lang==en" ng-bind-html="settori[0].testo_eng"></p>
     </div>
 </div>

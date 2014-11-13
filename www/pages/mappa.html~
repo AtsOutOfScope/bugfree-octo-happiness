@@ -9,13 +9,15 @@
       <div id="map"></div>
   
 </div>
+<div id="map_address">
 <div class="row">
 	<div class="col">
 		<strong>
         	<p>TRR srl</p>        	
         </strong>
 	</div>
-<div class="row">
+</div>
+<div  class="row">
 	<div class="col">
 		
         	<p>Via Saore, 25 Osio Sotto - Bergamo - Italy</p> 
@@ -23,4 +25,5 @@
 <p>email: info@trr.it website: www.trr.it</p>     	
         
 	</div>
+</div>
 </div> 

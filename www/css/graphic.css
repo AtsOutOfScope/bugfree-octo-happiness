@@ -16,8 +16,8 @@ a {text-decoration: none;}
 	border-top: 3px solid #7ABEB1;
 }
 #news_bar {
-	height: 130px;
-	margin-top: -10px;
+	height: 135px;
+	/*margin-top: -10px;*/
 	display: block;
 }
 #news_bar .news-title {
@@ -43,7 +43,7 @@ a {text-decoration: none;}
 	margin-top: 38px;
 }
 .icon-lightblue{
-	margin-top: -50px;
+	margin-top: -38px;
 }
 
 .menu-home-link {

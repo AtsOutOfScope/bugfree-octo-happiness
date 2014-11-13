@@ -1,10 +1,10 @@
 <div class="row tabs-chisiamo adapt" ng-init="selection='tab1'">
     <div class="col first-tab" ng-class="{'tab-active': selection=='tab1'}" ng-click="selection='tab1'"><img src="./img/1.jpg" /></div>
-    <div class="col tab" ng-class="{'tab-active': selection=='tab2'}" ng-click="selection='tab2'"><img src="./img/2.jpg" /></div>
-    <div class="col tab" ng-class="{'tab-active': selection=='tab3'}" ng-click="selection='tab3'"><img src="./img/3.jpg" /></div>
-    <div class="col tab" ng-class="{'tab-active': selection=='tab4'}" ng-click="selection='tab4'"><img src="./img/4.jpg" /></div>
-    <div class="col tab" ng-class="{'tab-active': selection=='tab5'}" ng-click="selection='tab5'"><img src="./img/5.jpg" /></div>
-    <div class="col tab" ng-class="{'tab-active': selection=='tab6'}" ng-click="selection='tab6'"><img src="./img/6.jpg" /></div>
+    <div class="col tab" ng-class="{'tab-active': selection=='tab2'}" ng-click="selection='tab2'"><img src="./img/6.jpg" /></div>
+    <div class="col tab" ng-class="{'tab-active': selection=='tab3'}" ng-click="selection='tab3'"><img src="./img/2.jpg" /></div>
+    <div class="col tab" ng-class="{'tab-active': selection=='tab4'}" ng-click="selection='tab4'"><img src="./img/3.jpg" /></div>
+    <div class="col tab" ng-class="{'tab-active': selection=='tab5'}" ng-click="selection='tab5'"><img src="./img/4.jpg" /></div>
+
 </div>
 
 <div class="row" ng-switch on="selection">
@@ -13,7 +13,7 @@
     <div class="col" ng-switch-when="tab3"><ng-include src="'pages/tabs/tab3.html'" ></ng-include></div>
     <div class="col" ng-switch-when="tab4"><ng-include src="'pages/tabs/tab4.html'" ></ng-include></div>
     <div class="col" ng-switch-when="tab5"><ng-include src="'pages/tabs/tab5.html'" ></ng-include></div>
-    <div class="col" ng-switch-when="tab6"><ng-include src="'pages/tabs/tab6.html'" ></ng-include></div>
+    
 </div>
 
 

@@ -2,23 +2,29 @@
     <div class="col">
         <ion-list>
             <ion-item ng-repeat="servizio in servizi" ng-click="openServizi($index)">               
-                <strong><p ng-show="lang==it" ng-bind="servizio.titolo_ita"></p></strong>
-                <strong><p ng-show="lang==en" ng-bind="servizio.titolo_eng"></p></strong>
+                <strong><p ng-hide="lang==it" ng-bind="servizio.titolo_ita"></p></strong>
+                <strong><p ng-hide="lang==en" ng-bind="servizio.titolo_eng"></p></strong>
             </ion-item>
         </ion-list>
     </div>
 </div>
 
 
-
-<div class="row" ng-show="api.showDescNews">
-    <div class="col">
-        
-        <strong>
-            <p ng-show="lang==it" ng-bind="servizio.titolo_ita"></p>
-            <p ng-show="lang==en" ng-bind="servizio.titolo_eng"></p>
-        </strong>
-        <p ng-show="lang==it" ng-bind-html="servizio.testo_ita"></p>
-        <p ng-show="lang==en" ng-bind-html="servizio.testo_eng"></p>
-    </div>
+<div  ng-show="api.showDescNews">
+	<div class="row">
+		<div class="col">		    
+		    <strong>
+		        <p ng-hide="lang==it" ng-bind="servizio.titolo_ita"></p>
+		        <p ng-hide="lang==en" ng-bind="servizio.titolo_eng"></p>
+		    </strong>
+		    <p ng-hide="lang==it" ng-bind-html="servizio.testo_ita"></p>
+		    <p ng-hide="lang==en" ng-bind-html="servizio.testo_eng"></p>
+		</div>
+	</div>
+	<div class="row adapt">
+		<div class="col adapt">		    
+		   <img style="width:100%;" ng-src="{{servizio.url}}"/>
+		</div>
+	</div>
 </div>
+
