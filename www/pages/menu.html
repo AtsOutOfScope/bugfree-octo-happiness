@@ -30,7 +30,7 @@
   <ion-side-menu side="left" class="side-menu">
     <ion-list>
         <ion-item ng-repeat="item in items" class="pointer item-menu">
-            <a class="link" ng-click="toggleLeft()" ng-class="{active: $index==$selected}" ui-sref="{{item.anchor}}">{{item.label}}</a>
+            <a class="link" ng-click="toggleLeft()" ng-class="{active: $index==$selected}" ui-sref="{{item.anchor}}"><span ng-hide="lang==it">{{item.label_ita}}</span><span ng-hide="lang==en">{{item.label_eng}}</span></a>
         </ion-item>
     </ion-list>
   </ion-side-menu>

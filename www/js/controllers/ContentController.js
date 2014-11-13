@@ -8,13 +8,13 @@ app.controller('ContentController', function($scope, $ionicSideMenuDelegate, $st
         $ionicSideMenuDelegate.toggleLeft();
     };
     $scope.items = [
-        {label: "HOME", anchor: "index"},
-        {label: "CHI SIAMO", anchor: "chisiamo"},
-        {label: "SETTORI", anchor: "settori"},
-        {label: "SERVIZI", anchor: "servizi"},
-        {label: "DOWNLOAD", anchor: "download"},
-        {label: "NOTIZIE", anchor: "notizie"},
-        {label: "CONTATTI", anchor: "contatti"}
+        {label_ita: "HOME",label_eng: "HOME", anchor: "index"},
+        {label_ita: "CHI SIAMO",label_eng: "WHO WE ARE", anchor: "chisiamo"},
+        {label_ita: "SETTORI",label_eng: "BRANCHES", anchor: "settori"},
+        {label_ita: "SERVIZI",label_eng: "SERVICES", anchor: "servizi"},
+        {label_ita: "DOWNLOAD",label_eng: "DOWNLOAD", anchor: "download"},
+        {label_ita: "NOTIZIE", label_eng: "NEWS",anchor: "notizie"},
+        {label_ita: "CONTATTI",label_eng: "CONTACTS", anchor: "contatti"}
     ];
     
     

@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col">
     	<strong>
-	        <p ng-show="lang==it" ng-bind="chiSiamo[5].titolo_ita"></p>
-        	<p ng-show="lang==en" ng-bind="chiSiamo[5].titolo_eng"></p>
+	        <p ng-hide="lang==it" ng-bind="chiSiamo[5].titolo_ita"></p>
+        	<p ng-hide="lang==en" ng-bind="chiSiamo[5].titolo_eng"></p>
          </strong>
     </div>
 </div>
 <div class="row">
     <div class="col">
-        <p ng-show="lang==it" ng-bind-html="chiSiamo[5].testo_ita"></p>
-        <p ng-show="lang==en" ng-bind-html="chiSiamo[5].testo_eng"></p>
+        <p ng-hide="lang==it" ng-bind-html="chiSiamo[5].testo_ita"></p>
+        <p ng-hide="lang==en" ng-bind-html="chiSiamo[5].testo_eng"></p>
     </div>
 </div>
