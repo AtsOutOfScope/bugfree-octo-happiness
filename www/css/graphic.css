@@ -49,6 +49,8 @@ a {text-decoration: none;}
 .menu-home-link {
 	color: #7ABEB1;
 } 
+
+
 .logo {
 	display: block;
 	margin-left: -65px;
@@ -166,3 +168,16 @@ border-top: none;
 	background-size: 30px;
 	text-transform: uppercase;
 }
+#menu_gen .col #icons1{
+	margin-top: -60px;
+	
+}
+
+
+@media only screen and (min-height: 639px) {
+	#menu_gen .col .icons-row{
+		height: 120px;
+		margin-top: 0px !important;
+	}
+}
+
