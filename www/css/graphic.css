@@ -25,7 +25,7 @@ a {text-decoration: none;}
 	color: #7ABEB1;
 }
 #news_bar .news-text {
-	font-size: 18px;
+	font-size: 5vh;
 }
 #news_bar #last_news {
 	padding-left: 20px;
@@ -174,10 +174,10 @@ border-top: none;
 }
 
 
-@media only screen and (min-height: 1100px) {
+/*@media only screen and (max-height: 1100px) {
 	#menu_gen .col .icons-row{
 		height: 120px;
 		margin-top: 0px !important;
 	}
-}
+}*/
 
