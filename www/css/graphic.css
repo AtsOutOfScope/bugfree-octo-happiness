@@ -174,10 +174,10 @@ border-top: none;
 }
 
 
-/*@media only screen and (max-height: 1100px) {
+@media only screen and (min-height: 600px) {
 	#menu_gen .col .icons-row{
-		height: 120px;
-		margin-top: 0px !important;
+		
+		margin-top: 50px;
 	}
-}*/
+}
 
