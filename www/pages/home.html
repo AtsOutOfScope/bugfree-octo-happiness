@@ -29,25 +29,22 @@
                 <div class="col col-33 ">
                     <a class="menu-home-link" ui-sref="chisiamo">
 						<div class="ion-person icon">	
-							<p ng-hide="lang==it" class="f-15">CHI SIAMO</p>
-							<p ng-hide="lang==en" class="f-15">WHO WE ARE</p>
+							<p class="f-15" ng-bind="lang==it ? 'WHO WE ARE' : 'CHI SIAMO'"></p>
 						</div>
 					</a>
                 </div>
                 <div class="col col-33">
                     <a class="menu-home-link" ui-sref="settori">
 						<div class="ion-ios7-box icon">	
-							<p ng-hide="lang==it" class="f-15">SETTORI</p>
-							<p ng-hide="lang==en" class="f-15">BRANCHES</p>
+							<p class="f-15" ng-bind="lang==it ? 'BRANCHES' : 'SETTORI'"></p>
 						</div>
 					</a>
                 </div>
                 <div class="col col-33">
                     <a class="menu-home-link" ui-sref="servizi">
-						<div class="ion-merge icon">
-							<p ng-hide="lang==it" class="f-15">SERVIZI</p>
-							<p ng-hide="lang==en" class="f-15">SERVICES</p>
-			 			</div>
+					<div class="ion-merge icon">
+						<p class="f-15" ng-bind="lang==it ? 'SERVICES' : 'SERVIZI'"></p>			
+			 		</div>
 					</a>
                 </div>
 
@@ -56,24 +53,21 @@
                 <div class="col col-33">
 					<a class="menu-home-link" ui-sref="download">
 						<div class="ion-android-download icon">
-							<p ng-hide="lang==it" class="f-15">DOWNLOAD</p>
-							<p ng-hide="lang==en" class="f-15">DOWNLOAD</p>
+							<p class="f-15" ng-bind="'DOWNLOAD'"></p>							
 						</div>
 					</a>
 				</div>
                 <div class="col col-33 ">			
 					<a class="menu-home-link" ui-sref="notizie">
 						<div class="ion-ios7-paper icon">
-							<p ng-hide="lang==it" class="f-15">NOTIZIE</p>
-							<p ng-hide="lang==en" class="f-15">NEWS</p>
+							<p class="f-15" ng-bind="lang==it ? 'NEWS' : 'NOTIZIE'"></p>
 						</div>
 					</a>
                 </div>
                 <div class="col col-33">				
                     <a class="menu-home-link" ui-sref="contatti">
 						<div class="ion-ios7-telephone icon">	
-							<p ng-hide="lang==it" class="f-15">CONTATTI</p>
-							<p ng-hide="lang==en" class="f-15">CONTACTS</p>
+							<p class="f-15" ng-bind="lang==it ? 'CONTACTS' : 'CONTATTI'"></p>
 						</div>
 					</a>				
                 </div>
